@@ -36,7 +36,7 @@ class syntax_plugin_plaintext_block extends DokuWiki_Syntax_Plugin {
             case DOKU_LEXER_ENTER:
                 return array($state);
             case DOKU_LEXER_UNMATCHED :
-                $handler->_addCall('cdata', array($match), $pos);
+                $handler->addCall('cdata', array($match), $pos);
                 return false;
             case DOKU_LEXER_EXIT :
                 return array($state);
